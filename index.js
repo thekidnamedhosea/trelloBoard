@@ -3,15 +3,15 @@
 const trelloBoardController = {};
 
 const viewController = {
-  taskButtonEventListener = (event) => {
+  taskButtonEventListener: event => {
     const targetElm = event.target;
-    targetElm.previousElementSibling.append(
-      viewController.createElement(
-        'li',
-        'Perferendis perspiciatis velit amet odio odit blanditiis',
-        'task'
-      )
+    const newTaskELm = viewController.createElement(
+      'li',
+      '<textarea placeholder="Type here..."></textarea> ',
+      'task'
     );
+    targetElm.previousElementSibling.append(newTaskELm);
+    newTaskELm.firstChild.focus();
   },
 
   createElement(type, innerHtml, className) {

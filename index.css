@@ -32,8 +32,8 @@ body {
 }
 
 .task {
-  display: inline-block;
-  padding: 0.25rem;
+  display: block;
+  padding: 0.5rem;
   background-color: rgb(173, 181, 226);
   border-radius: 0.25rem;
   margin-bottom: 0.25rem;
@@ -44,6 +44,14 @@ body {
 }
 .task:active {
   cursor: grabbing;
+}
+
+.task textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+  width: 100%;
 }
 
 .add-task-button {
